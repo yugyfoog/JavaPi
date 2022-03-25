@@ -56,21 +56,7 @@ public class Pi {
 			break;
 		}
 	}
-		
 	
-	/*
-	private static void print(char[] U, int d) {
-		System.out.print((int)U[U.length-1]);
-		U[U.length-1] = 0;
-		System.out.print('.');
-		for (int i = 0; i < d; i++) {
-			multiply(U, 10);
-			System.out.print((int)U[U.length-1]);
-			U[U.length-1] = 0;
-		}
-	}
-	*/
-
 	public static void multiply(char[] U, int v) {
 		long k = 0;
 		for (int i = 0; i < U.length; i++) {
