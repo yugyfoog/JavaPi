@@ -31,6 +31,34 @@ public class Pi {
 		System.out.println();
 	}
 
+	private static void print(char U[], int d) {
+		System.out.print((int)U[U.length-1]); // the 3
+		U[U.length-1] = 0;
+		System.out.print('.');;
+		while (d > 3) {
+			multiply(U, 10000);
+			System.out.format("%04d", (int)U[U.length-1]);
+			U[U.length-1] = 0;
+			d -= 4;
+		}
+		switch (d) {
+		case 1:
+			multiply(U, 10);
+			System.out.format("%01d", (int)U[U.length-1]);
+			break;
+		case 2:
+			multiply(U, 100);
+			System.out.format("%02d", (int)U[U.length-1]);
+			break;
+		case 3:
+			multiply(U, 1000);
+			System.out.format("%03d", (int)U[U.length-1]);
+			break;
+		}
+	}
+		
+	
+	/*
 	private static void print(char[] U, int d) {
 		System.out.print((int)U[U.length-1]);
 		U[U.length-1] = 0;
@@ -41,6 +69,7 @@ public class Pi {
 			U[U.length-1] = 0;
 		}
 	}
+	*/
 
 	public static void multiply(char[] U, int v) {
 		long k = 0;
